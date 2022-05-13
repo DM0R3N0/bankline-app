@@ -9,6 +9,10 @@ import { MovimentacaoService } from 'src/app/services/movimentacao.service';
 export class MovimentacaoNewComponent implements OnInit {
   correntistas: any;
   correntista: any;
+  valor: any;
+  tipo: any;
+  dataHora: any;
+  descricao: any;
 
   constructor(
     private movimentacaoService: MovimentacaoService,
@@ -33,7 +37,7 @@ export class MovimentacaoNewComponent implements OnInit {
 
 
 save(): void {
-  console.log(this.correntistas)
+  console.log(this.correntista)
   const movimentacao = {
     valor:this.valor,
     descricao:this.descricao,
